@@ -1,0 +1,114 @@
+csc343h-anonuev1=> \i runner.txt
+-------------------- Loading schema and data: --------------------
+
+psql:schema.ddl:37: NOTICE:  drop cascades to 14 other objects
+DETAIL:  drop cascades to table ticketschema.owners
+drop cascades to table ticketschema.venue
+drop cascades to table ticketschema.section
+drop cascades to table ticketschema.seat
+drop cascades to table ticketschema.concert
+drop cascades to table ticketschema.ticketprice
+drop cascades to table ticketschema.ticket
+drop cascades to table ticketschema.appuser
+drop cascades to table ticketschema.purchase
+drop cascades to view ticketschema.pricesperticket
+drop cascades to view ticketschema.ticketsales
+drop cascades to view ticketschema.venueseats
+drop cascades to view ticketschema.venueaccessibleseats
+drop cascades to view ticketschema.usertickets
+DROP SCHEMA
+CREATE SCHEMA
+SET
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+SET
+INSERT 0 5
+INSERT 0 10
+INSERT 0 20
+INSERT 0 150
+INSERT 0 5
+INSERT 0 10
+INSERT 0 5
+INSERT 0 8
+INSERT 0 55
+INSERT 0 25
+INSERT 0 10
+INSERT 0 10
+INSERT 0 9
+INSERT 0 9
+
+-------------------- Query 1: -----------------------------------
+
+SET
+psql:q1.sql:3: NOTICE:  view "pricesperticket" does not exist, skipping
+DROP VIEW
+psql:q1.sql:4: NOTICE:  view "venueseats" does not exist, skipping
+DROP VIEW
+psql:q1.sql:5: NOTICE:  view "ticketsales" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+CREATE VIEW
+ cid | tickets_sold | value_sold | percentage_sold
+-----+--------------+------------+-----------------
+   1 |            8 |     525.00 |           80.00
+   2 |            0 |          0 |            0.00
+   3 |           55 |    4200.00 |           91.67
+   4 |            0 |          0 |            0.00
+   5 |            0 |          0 |            0.00
+(5 rows)
+
+
+-------------------- Query 2: -----------------------------------
+
+SET
+ oid | num_venues
+-----+------------
+   5 |          2
+   4 |          1
+   2 |          2
+   1 |          3
+   3 |          2
+(5 rows)
+
+
+-------------------- Query 3: -----------------------------------
+
+SET
+DROP VIEW
+psql:q3.sql:4: NOTICE:  view "venueaccessibleseats" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+CREATE VIEW
+ venue | num_seats | percentage_accessible
+-------+-----------+-----------------------
+     1 |        10 |                 50.00
+     2 |        10 |                 20.00
+     3 |        60 |                 30.00
+     4 |        10 |                 20.00
+     5 |        10 |                 20.00
+     6 |        10 |                 20.00
+     7 |        10 |                 20.00
+     8 |        10 |                 20.00
+     9 |        10 |                 20.00
+    10 |        10 |                 20.00
+(10 rows)
+
+
+-------------------- Query 4: -----------------------------------
+
+SET
+psql:q4.sql:3: NOTICE:  view "usertickets" does not exist, skipping
+DROP VIEW
+CREATE VIEW
+ username | num_tickets
+----------+-------------
+ superfan |          25
+(1 row)
